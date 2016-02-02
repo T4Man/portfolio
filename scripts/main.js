@@ -9,7 +9,5 @@ $(function(){
   $('.audioLinks').focus(function(){
     $('#audioStuff').show();
   });
-
-
-
+  
 });
