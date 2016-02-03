@@ -1,1 +1,1 @@
-It starts small, but will be gaining new features regularly.
+In this version I had to re-think my design in order to meet the requirements of the assignment to not have any external links and to have a good About Me feature. It has a long way to go but I think this may be a much better foundation to work from.
