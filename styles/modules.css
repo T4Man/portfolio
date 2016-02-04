@@ -1,0 +1,107 @@
+
+.heading-group-h1 {
+  float: left;
+  padding: 0 0 .2em 1em;
+  color: black;
+  margin-right: 10%;
+}
+
+.icon-menu {
+  float: right;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30%;
+  margin-left: 10%;
+}
+
+.main-nav {
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+@media only screen and (min-width: 640px) {
+  .site-header {
+  background: url("/Users/timforman/301/portfolioTest/images/DungSpitEdit.jpg") no-repeat center;
+}
+  img {
+    max-width: 440px;
+    height: auto;
+    padding: 1%;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav {
+    padding: .3em .3em .3em 3em;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .main-nav:hover ul {
+    display: flex;
+  }
+
+  .main-nav li {
+    display: inline;
+    border-bottom: none;
+  }
+
+  .main-nav ul li:hover a {
+    color: red;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 1440px;
+    border-right: solid #6fabce 3px;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .main-nav li {
+    padding: 10px;
+
+  }
+
+  .tab {
+    display: inline-block;
+    border-top: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-radius: 10px 10px 0 0;
+    background-color: lightblue;
+
+  }
+
+}

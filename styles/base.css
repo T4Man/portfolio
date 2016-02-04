@@ -1,0 +1,42 @@
+/* TODO: Add a rule for images, so they never exceed their container's width. */
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #FFF;
+  background: url("/Users/timforman/301/portfolioTest/images/DungSpitEdit.jpg") no-repeat center;
+  min-width: 320px;
+}
+
+
+  hr {
+    margin: 1em;
+    width: 80%;
+  }
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:focus {
+  color: #29506D;
+}
+
+a:visited {
+  color: black;
+}
+@media only screen and (min-width: 640px) {
+  body {
+    background: #001933;
+  }
+
+}
