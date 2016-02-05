@@ -1,18 +1,17 @@
 /* TODO: Add a rule for images, so they never exceed their container's width. */
 
 body {
+  max-width: 1040px;
   line-height: 1.5;
   font-size: 100%;
   color: #FFF;
-  background: url("/Users/timforman/301/portfolioTest/images/DungSpitEdit.jpg") no-repeat center;
+  background: #001933;
   min-width: 320px;
+  padding:1%;
 }
-
-
-  hr {
-    margin: 1em;
-    width: 80%;
-  }
+#self-image {
+  border-radius: 50%;
+}
 
 /*TEXT STYLES
 =======================================*/
