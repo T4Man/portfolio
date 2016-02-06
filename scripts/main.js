@@ -1,7 +1,6 @@
 var aboutArray = [];
 var projectArray = [];
 
-
 function ContentConstr (opts){
   this.title = opts.title;
   this.image = opts.image;
@@ -18,11 +17,11 @@ ContentConstr.prototype.populateProjects = function(){
   return template(this);
 };
 
-AboutData.forEach(function(ele){
+aboutData.forEach(function(ele){
   aboutArray.push(new ContentConstr(ele));
 });
 
-ProjectData.forEach(function(ele){
+projectData.forEach(function(ele){
   projectArray.push(new ContentConstr(ele));
 });
 
@@ -34,16 +33,16 @@ projectArray.forEach(function(a){
   $('#projects').append(a.populateProjects());
 });
 
+$('#about-me').hide();
+
+$('#about').on('click', function(){
+  $('#projects').hide();
+  $('#about-me').fadeIn();
+});
+
+$('.icon-home').on('click', function(){
   $('#about-me').hide();
-
-  $('#about').on('click', function(){
-    $('#projects').hide();
-    $('#about-me').fadeIn();
-  });
-
-  $('.icon-home').on('click', function(){
-    $('#about-me').hide();
-    $('#projects').fadeIn();
-  });
+  $('#projects').fadeIn();
+});
 
 

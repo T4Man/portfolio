@@ -9,6 +9,7 @@ body {
   min-width: 320px;
   padding:1%;
 }
+
 #self-image {
   border-radius: 50%;
 }
@@ -18,9 +19,9 @@ body {
 p {
   font-size: 1em;
 }
+
 /*LINK STYLES
 =======================================*/
-
 a, a:link, a:active {
   text-decoration: none;
   color: black;

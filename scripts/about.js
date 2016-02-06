@@ -1,4 +1,4 @@
-AboutData = [
+aboutData = [
   {
     title: 'About Me',
     image: 'images/self.jpg',
