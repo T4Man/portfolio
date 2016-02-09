@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script id="projects-template" type="text/x-handlebars-template">
-      <h1>{{title}}</h1>
+      <h2>{{title}}</h2>
       <p>{{{body}}}</p>
     </script>
     <script id="about-me-template" type="text/x-handlebars-template">
-      <h1>{{title}}</h1>
+      <h2>{{title}}</h2>
       <img id="self-image" src="{{image}}"></img>
       <p>{{body}}</p>
     </script>
@@ -49,8 +49,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="scripts/about.js"></script>
-    <script src="scripts/projects.js"></script>
     <script src="scripts/contentView.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+      ContentConstr.fetchProjects(contentView.initMainPage);
+    </script>
   </body>
 </html>
