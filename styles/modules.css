@@ -71,6 +71,12 @@
   body {
     background: url("../images/DungSpitEdit.jpg") no-repeat center;
   }
+  h1 {
+    font-family: Georgia, Helvetica, Arial, sans-serif;
+  }
+  h2 {
+    font-family: Georgia, Helvetica, Arial, sans-serif;
+  }
   #projects {
     background-color: rgba(0, 0, 0, 0.4);
   }
