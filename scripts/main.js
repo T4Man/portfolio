@@ -1,19 +1,14 @@
-var aboutArray = [];
-var projectArray = [];
-
 function ContentConstr (opts){
   this.title = opts.title;
   this.image = opts.image;
   this.body = opts.body;
 }
 
+aboutArray = [];
+ContentConstr.project = [];
+
 ContentConstr.prototype.populateAbout = function(){
   var template = Handlebars.compile($('#about-me-template').text());
-  return template(this);
-};
-
-ContentConstr.prototype.populateProjects = function(){
-  var template = Handlebars.compile($('#projects-template').text());
   return template(this);
 };
 
@@ -21,28 +16,48 @@ aboutData.forEach(function(ele){
   aboutArray.push(new ContentConstr(ele));
 });
 
-projectData.forEach(function(ele){
-  projectArray.push(new ContentConstr(ele));
-});
-
 aboutArray.forEach(function(a){
   $('#about-me').append(a.populateAbout());
 });
 
-projectArray.forEach(function(a){
-  $('#projects').append(a.populateProjects());
-});
+ContentConstr.prototype.populateProjects = function(){
+  var template = Handlebars.compile($('#projects-template').text());
+  return template(this);
+};
 
-$('#about-me').hide();
+ContentConstr.loadProjects = function(rawData) {
+  rawData.forEach(function(ele){
+    ContentConstr.project.push(new ContentConstr(ele));
+  });
+};
 
-$('#about').on('click', function(){
-  $('#projects').hide();
-  $('#about-me').fadeIn();
-});
+ContentConstr.getProjects = function(){
+  $.getJSON('/scripts/projects.json', function(data){
+    localStorage.rawData = JSON.stringify(data);
+    ContentConstr.loadProjects(data);
+    contentView.initMainPage();
+  });
+};
 
-$('.icon-home').on('click', function(){
-  $('#about-me').hide();
-  $('#projects').fadeIn();
-});
+ContentConstr.fetchProjects = function() {
+  if (localStorage.rawData) {
+    $.ajax({
+      type: 'HEAD',
+      url: 'scripts/projects.json',
+      success: function(data, message, xhr){
+        console.log(xhr);
+        var eTag = xhr.getResponseHeader('eTag');
+        if (!localStorage.eTag || eTag !== localStorage.eTag){
+          localStorage.eTag = eTag;
+        } else {
+          ContentConstr.loadProjects(JSON.parse(localStorage.rawData));
+          contentView.initMainPage();
+        }
+      }
+    });
+  } else {
+    ContentConstr.getProjects();
+  }
+};
 
 
