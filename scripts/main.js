@@ -26,8 +26,8 @@ ContentConstr.prototype.populateProjects = function(){
 };
 
 ContentConstr.loadProjects = function(rawData) {
-  rawData.forEach(function(ele){
-    ContentConstr.project.push(new ContentConstr(ele));
+  ContentConstr.project = rawData.map(function(ele){
+    return new ContentConstr(ele);
   });
 };
 
@@ -42,8 +42,8 @@ ContentConstr.getProjects = function(){
 ContentConstr.fetchProjects = function() {
   if (localStorage.rawData) {
     $.ajax({
-      type: 'HEAD',
       url: 'scripts/projects.json',
+      type: 'HEAD',
       success: function(data, message, xhr){
         console.log(xhr);
         var eTag = xhr.getResponseHeader('eTag');
@@ -59,5 +59,3 @@ ContentConstr.fetchProjects = function() {
     ContentConstr.getProjects();
   }
 };
-
-
