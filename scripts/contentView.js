@@ -1,20 +1,23 @@
-contentView = {};
+(function(module){
 
-contentView.initMainPage = function(){
-  ContentConstr.project.forEach(function(a){
-    $('#projects').append(a.populateProjects());
-  });
-};
+  contentView = {};
 
-$('#about-me').hide();
+  contentView.initMainPage = function(){
+    ContentConstr.project.forEach(function(a){
+      $('#projects').append(a.populateProjects());
+    });
+  };
 
-$('#about').on('click', function(){
-  $('#projects').hide();
-  $('#about-me').fadeIn();
-});
-
-$('.icon-home').on('click', function(){
   $('#about-me').hide();
-  $('#projects').fadeIn();
-});
 
+  $('#about').on('click', function(){
+    $('#projects').hide();
+    $('#about-me').fadeIn();
+  });
+
+  $('.icon-home').on('click', function(){
+    $('#about-me').hide();
+    $('#projects').fadeIn();
+  });
+
+})(window);
