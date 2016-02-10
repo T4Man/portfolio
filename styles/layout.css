@@ -1,4 +1,6 @@
-
+#main-section {
+  min-width: 320px;
+}
 .heading-group-h1 {
   max-width: 80%;
 }
@@ -8,3 +10,4 @@
     padding: .1em .1em .1em 2em;
     float: none;
   }
+}

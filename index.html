@@ -10,7 +10,16 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-  </head>
+    <script id="projects-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <p>{{{body}}}</p>
+    </script>
+    <script id="about-me-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <img id="self-image" src="{{image}}"></img>
+      <p>{{body}}</p>
+    </script>
+      </head>
   <body>
     <header class="site-header">
       <section class="heading-group-h1">
@@ -20,11 +29,9 @@
         <h2>Web Developer</h2>
       </section>
       <nav class="main-nav">
-        <div>
-          <img class="icon-menu" src="/Users/timforman/301/portfolioTest/styles/fonts/menu.png"</img>
-        </div>
+        <img id="icon-menu" src="styles/fonts/menu.png"</img>
         <ul>
-          <li class="tab"><a href="#" class="icon-home">Home</a></li>
+          <li class="tab"><a href="#" class="icon-home">Projects</a></li>
           <li class="tab" id="about"><a href="#" class="icon-address-book"> About Me</a></li>
           <li class="tab"><a href="http://twitter.com" target="_blank" class="icon-twitter3"> Twitter</a></li>
           <li class="tab"><a href="http://github.com" target="_blank" class="icon-github"> GitHub</a></li>
@@ -32,22 +39,20 @@
       </nav>
     </header>
     <main id="main-section">
-      <section id="intro">
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      <section id="projects">
       </section>
       <section id="about-me" class="tab-content">
-        <section>
-          <h1>About Me:</h1>
-          <ul>
-            <li>Coding</li>
-            <li>Tech Experience</li>
-          </ul>
-        </section>
       </section>
     </main>
     <footer>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/Users/timforman/301/portfolioTest/scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="scripts/about.js"></script>
+    <script src="scripts/contentView.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      ContentConstr.fetchProjects(contentView.initMainPage);
+    </script>
   </body>
 </html>

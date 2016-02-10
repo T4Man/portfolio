@@ -1,42 +1,77 @@
-/* TODO: Add a rule for images, so they never exceed their container's width. */
-
 body {
+  max-width: 1040px;
   line-height: 1.5;
   font-size: 100%;
   color: #FFF;
-  background: url("/Users/timforman/301/portfolioTest/images/DungSpitEdit.jpg") no-repeat center;
+  background: #001933;
   min-width: 320px;
+  padding:1%;
 }
-
-
-  hr {
-    margin: 1em;
-    width: 80%;
-  }
+#self-image {
+  border-radius: 50%;
+}
 
 /*TEXT STYLES
 =======================================*/
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.75em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+blockquote {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.0em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+pre {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: .68em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
 p {
   font-size: 1em;
 }
+
 /*LINK STYLES
 =======================================*/
-
 a, a:link, a:active {
   text-decoration: none;
   color: black;
 }
-
 a:hover, a:focus {
   color: #29506D;
 }
-
 a:visited {
   color: black;
 }
+
 @media only screen and (min-width: 640px) {
   body {
     background: #001933;
   }
-
 }
