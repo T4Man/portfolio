@@ -8,7 +8,7 @@
     });
   };
 
-  $('#about-me').hide();
+  $('#projects').hide();
 
   $('#about').on('click', function(){
     $('#projects').hide();
