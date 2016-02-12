@@ -10,3 +10,8 @@ map method, wrapping interface methods in an IIFE and correcting some indentatio
 and spacing in the code. Also learned the importance of clearing the local storage
 when engaging in troubleshooting!!
 
+Class-08 styling
+
+Class-09 changes reflect refactoring the object constructor to handle dynamic input, and a minor
+change of an argument abbreviation. The 'populate' methods could likely be refactored into a single instance. This would need to coincide with refactoring the 'fetch' method. My understanding
+from a conversation with Brian is that I could use client-side routing to accomplish this. We will be learning about this during Class 11.
