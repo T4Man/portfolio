@@ -1,9 +1,9 @@
 (function(module){
 
   function ContentConstr (opts){
-    this.title = opts.title;
-    this.image = opts.image;
-    this.body = opts.body;
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
   }
 
   aboutArray = [];
@@ -18,8 +18,8 @@
     aboutArray.push(new ContentConstr(ele));
   });
 
-  aboutArray.forEach(function(a){
-    $('#about-me').append(a.populateAbout());
+  aboutArray.forEach(function(ele){
+    $('#about-me').append(ele.populateAbout());
   });
 
   ContentConstr.prototype.populateProjects = function(){
