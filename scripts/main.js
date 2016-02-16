@@ -51,7 +51,6 @@
           var eTag = xhr.getResponseHeader('eTag');
           if (!localStorage.eTag || eTag !== localStorage.eTag){
             localStorage.eTag = eTag;
-            localStorage.clear();
           } else {
             ContentConstr.loadProjects(JSON.parse(localStorage.rawData));
             contentView.initMainPage();
