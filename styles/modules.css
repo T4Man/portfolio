@@ -1,34 +1,35 @@
-
+.site-header {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  background: url("../images/DungSpitEdit.jpg") no-repeat center;
+}
 .heading-group-h1 {
-  float: left;
+  display: inline-block;
+  width: 80%;
   padding: 0 0 .2em 1em;
   color: black;
-  margin-right: 10%;
 }
-
-.icon-menu {
-  float: right;
-  width: 60px;
-  height: 60px;
-  margin-bottom: 30%;
-  margin-left: 10%;
+#icon-menu {
+  height: 80px;
+  width: 80px;
+  padding-bottom: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-
 .main-nav {
   padding: 0.1em;
 }
-
 .main-nav ul {
   display: none;
   padding: 0;
   list-style: none;
   clear: both;
 }
-
 .main-nav:hover ul {
   display: block;
 }
-
 .main-nav li {
   margin-right: .4em;
   font-size: 1.5em;
@@ -36,72 +37,79 @@
   border-bottom: 1px solid #ccc;
 }
 
-@media only screen and (min-width: 640px) {
-  .site-header {
-  background: url("/Users/timforman/301/portfolioTest/images/DungSpitEdit.jpg") no-repeat center;
-}
+@media only screen and (min-width: 780px) {
+
   img {
     max-width: 440px;
     height: auto;
     padding: 1%;
   }
-
-  .icon-menu {
+  #icon-menu {
     display: none;
   }
-
+  .main-nav ul{
+    display: block;
+  }
+  .tab {
+    display: inline-block;
+  }
   .main-nav {
     padding: .3em .3em .3em 3em;
   }
-
-  .main-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  .site-header {
+    width: 100%;
   }
-  .main-nav:hover ul {
-    display: flex;
-  }
-
   .main-nav li {
     display: inline;
     border-bottom: none;
   }
-
-  .main-nav ul li:hover a {
+  .main-nav li:hover a {
     color: red;
   }
-
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    max-width: 1440px;
-    border-right: solid #6fabce 3px;
-  }
+@media only screen and (min-width: 930px) {
 
+  body {
+    background: url("../images/DungSpitEdit.jpg") no-repeat center;
+  }
+  h1 {
+    font-family: Georgia, Helvetica, Arial, sans-serif;
+    font-size: 2.25em;
+    text-shadow: 2px 2px #000;
+  }
+  h2 {
+    font-family: Georgia, Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    text-shadow: 2px 2px #000;
+  }
+  #projects {
+    background-color: rgba(0, 0, 0, 0.4);
+    max-width: 90%;
+  }
+  #about-me {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .site-header {
+    background: none;
+  }
+  .heading-group-h1 {
+    font-size: 1.5rem;
+    color: #881122;
+  }
   .icon-menu {
     display: none;
   }
-
   .main-nav ul {
     display: block;
     margin-bottom: 0;
   }
-
   .main-nav li {
     padding: 10px;
-
   }
-
   .tab {
     display: inline-block;
-    border-top: solid 1px;
-    border-left: solid 1px;
-    border-right: solid 1px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 10px 10px;
     background-color: lightblue;
-
   }
-
 }
