@@ -5,6 +5,7 @@
 *.dll
 *.exe
 *node_modules
+*githubToken.js
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -20,6 +21,7 @@
 
 # Logs and databases #
 ######################
+*.gitignore
 *.log
 *.sql
 *.sqlite
