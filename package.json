@@ -13,8 +13,8 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/T4Man/portfolio/issues"
-  },
-  "homepage": "https://github.com/T4Man/portfolio"
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-request-proxy": "^1.0.10"
+  }
 }
