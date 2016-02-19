@@ -1,4 +1,12 @@
-page('/projects', mainsController.index);
-page('/', aboutController.index);
-page('/gitRepos', repoView.index);
+page('/projects',
+  mainsController.index,
+  contentView.initMainPage);
+
+page('/',
+  aboutController.index,
+  contentView.initMainPage);
+
+page('/gitRepos',
+  repoView.index);
+
 page();
