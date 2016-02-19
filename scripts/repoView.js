@@ -7,13 +7,12 @@
     $gitRepos.show().siblings().hide();
   };
   var render = function(repo) {
-    return $('<li>').html('<a href="' + repo.html_url + '"> '+ repo.name +' </a>');
+    return $('<li>').html('<a href="' + repo.html_url + '" target="_blank"> '+ repo.name +' </a>');
   };
   repoView.index = function() {
     ui();
     $('#gitRepos ul').append(
-      repos.with('name').map(render)
-    );
+      repos.with('name').map(render));
   };
   module.repoView = repoView;
 })(window);
